@@ -1,28 +1,41 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
 import './App.css';
+import 'bootstrap/dist/css/bootstrap.css';
+import Imgs from './components/images';
+
+
 
 class App extends Component {
+  shuffle = (array) => {
+    let
+      i = array.length,
+      j = 0,
+      temp;
+    while (i--) {
+      j = Math.floor(Math.random() * (i + 1));
+
+      temp = array[i];
+      array[i] = array[j];
+      array[j] = temp;
+    }
+    return array
+  };
+
   render() {
     return (
-      <div className="App">
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <p>
-            Edit <code>src/App.js</code> and save to reload.
-          </p>
-          <a
-            className="App-link"
-            href="https://reactjs.org"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Learn React
-          </a>
-        </header>
+      <div className="App container-fluid">
+        <Imgs shuffle={this.shuffle} />
       </div>
     );
   }
+
 }
+
+
+
+
+
+
+
 
 export default App;
