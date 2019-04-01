@@ -18,6 +18,15 @@
   font-size: calc(10px + 2vmin);
   color: white;
 }
+.images{
+  background-size:  cover;
+  background-position: 50%;
+  cursor: pointer;
+  height: 133.25px;
+  width: 133.25px;
+  padding: 0;
+  margin: 8px 25px;
+} 
 
 .App-link {
   color: #61dafb;

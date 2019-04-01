@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import './App.css';
 import 'bootstrap/dist/css/bootstrap.css';
 import Imgs from './components/images';
-
+// import Jumbotron from './components/jumbotron';
 
 
 class App extends Component {
